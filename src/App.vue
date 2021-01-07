@@ -2,8 +2,7 @@
   <div id="app">
     <navbar></navbar>
    <div class="container">
-      <filtersearch></filtersearch>
-      <contentbody></contentbody>
+      <router-view></router-view>
    </div>
 
   </div>
@@ -11,14 +10,10 @@
 
 <script>
 import navbar from './components/Navbar.vue'
-import filtersearch from './components/FilterSearch.vue'
-import contentbody from './components/ContentBody.vue'
 export default {
   name: 'App',
   components: {
     navbar,
-    filtersearch,
-    contentbody
   }
 }
 </script>

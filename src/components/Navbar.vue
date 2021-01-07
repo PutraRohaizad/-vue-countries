@@ -18,8 +18,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Dark Mode
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+           <i class="fa fa-eye"></i> Dark Mode
           </button>
         </form>
       </div>

@@ -34,10 +34,5 @@ There are no assets for this challenge, as the country flags will be pulled from
 
 There is a `style-guide.md` file, which contains the information you'll need, such as color palette and fonts.
 
-## Sharing your solution
-
-1. Submit your solution to [Difa] (admin@runcloud.io).
-2. Share your repository on github.
-3. Share the live URL of the completed assessment.
 
 

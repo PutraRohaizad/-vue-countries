@@ -8,6 +8,11 @@
       <div class="col-md-3">
         <select name="region" class="custom-select">
           <option value="">Select Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Ocenia">Ocenia</option>
         </select>
       </div>
     </div>
