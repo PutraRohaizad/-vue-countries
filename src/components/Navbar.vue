@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
      <div class="container">
-        <a class="navbar-brand" href="#"><b>Where in the world?</b></a>
+        <a class="navbar-brand" href="/"><b>Where in the world?</b></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,11 +17,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"></ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
-           <i class="fa fa-eye"></i> Dark Mode
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="button" @click="$emit('toggleMode')">
+           <i class="fa fa-moon-o"></i> Dark Mode
           </button>
-        </form>
       </div>
      </div>
     </nav>

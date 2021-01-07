@@ -31,27 +31,8 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
-  data() {
-    return {
-      countries: [],
-    };
-  },
-  created() {
-    this.getData();
-  },
-  methods: {
-    getData() {
-      axios
-        .get("https://restcountries.eu/rest/v2/all")
-        .then((res) => {
-          console.log(res.data);
-          this.countries = res.data;
-        })
-        .catch((err) => console.log(err));
-    },
-  },
+  props:['countries']
 };
 </script>
 

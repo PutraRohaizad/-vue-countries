@@ -57,6 +57,7 @@
           <div class="col-md-7">
             <a
               v-for="border in country.borders"
+              onclick="setTimeout(function(){ location.reload() }, 500)"
               :key="border.code"
               class="border-countries btn btn-outline-dark mr-1 mb-1"
               :href="'#/detail/' + border"
