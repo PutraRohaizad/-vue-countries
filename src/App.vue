@@ -39,8 +39,8 @@ export default {
 
 <style>
 #app {
-  background-color: rgb(239, 245, 245);
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  font-family: 'Nunito Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

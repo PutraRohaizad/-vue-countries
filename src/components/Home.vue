@@ -1,9 +1,10 @@
 <template>
   <div>
-   
-    <filtersearch @filterSearch="filterSearch($event)"></filtersearch>
+    <filtersearch
+      @filterSearch="filterSearch($event)"
+      @filterRegion="filterRegion($event)"
+    ></filtersearch>
     <contentbody :countries="filterCountries"></contentbody>
- 
   </div>
 </template>
 
@@ -16,7 +17,7 @@ export default {
     filtersearch,
     contentbody,
   },
-    data() {
+  data() {
     return {
       countries: [],
       filterCountries: this.countries,
@@ -34,12 +35,16 @@ export default {
         })
         .catch((err) => console.log(err));
     },
-    filterSearch(search){
-         this.filterCountries = this.countries.filter((country)=>{
+    filterSearch(search) {
+      this.filterCountries = this.countries.filter((country) => {
         return country.name.toLowerCase().match(search.toLowerCase());
-      })
-    }
-
+      });
+    },
+    filterRegion(region) {
+      this.filterCountries = this.countries.filter((country) => {
+        return country.region.toLowerCase().match(region.toLowerCase());
+      });
+    },
   },
 };
 </script>

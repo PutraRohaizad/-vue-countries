@@ -13,14 +13,14 @@
         <img
           alt="Vue logo"
           :src="country.flag"
-        style="width:100%;"
+        style="width:100%; height:300px;"
 
         />
       </div>
-      <div class="col-md-6">
-        <h5>
+      <div class="col-md-6 card-body">
+        <h4>
           <b>{{ country.name }}</b>
-        </h5>
+        </h4>
         <div class="row">
           <div class="col-md-6">
             <p><b>Native Name</b> : {{ country.nativeName }}</p>
@@ -51,10 +51,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-4">
             <b>Border Countries:</b>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-8">
             <a
               v-for="border in country.borders"
               onclick="setTimeout(function(){ location.reload() }, 500)"
@@ -102,6 +102,7 @@ export default {
 <style scoped>
 .shadow {
   box-shadow: 2px 2px 5px 2px #c4c2c2;
+  background-color: hsl(0, 0%, 98%);
 }
 
 .border-countries {

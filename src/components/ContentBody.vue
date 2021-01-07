@@ -6,7 +6,7 @@
         v-bind:key="country.id"
         class="col-md-3 mb-5"
       >
-        <div class="card border-card card-body">
+        <div class="card border-card">
           <div>
             <router-link :to="{ path: '/detail/' + country.alpha3Code }">
               <img
@@ -16,11 +16,11 @@
               />
             </router-link>
           </div>
-          <div class="mt-3">
+          <div class="mt-3 card-body">
             <h5>
               <strong>{{ country.name }}</strong>
             </h5>
-            <p><b>Population</b>: {{ country.population }}</p>
+            <p><b>Population</b>: {{ country.population.toLocaleString() }}</p>
             <p><b>Region</b>: {{ country.region }}</p>
             <p><b>Capital</b>: {{ country.capital }}</p>
           </div>
@@ -39,5 +39,6 @@ export default {
 <style scoped>
 .border-card {
   box-shadow: 2px 2px 5px 2px #c4c2c2;
+  border-radius: 5px;;
 }
 </style>
