@@ -1,0 +1,49 @@
+<template>
+  <div>
+    <div class="row mt-5">
+      <div v-for="country in countries" v-bind:key="country.id" class="col-md-3">
+          <div class="card border-card card-body">
+            <div>
+              <img alt="Vue logo" :src="country.flag" style="width:100%;">
+            </div>
+            <div class="mt-3">
+              <h5><strong>{{country.name}}</strong></h5>
+                <p><b>Population</b>: {{country.population}} </p>
+                <p><b>Region</b>: {{country.region}} </p>
+                <p><b>Capital</b>: {{country.capital}} </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+export default {
+  data(){
+    return {
+      countries: []
+  }
+  },
+  created(){
+    this.getData()
+  },
+  methods:{
+    getData(){
+        axios.get('https://restcountries.eu/rest/v2/region/europe')
+        .then(res => {
+          console.log(res.data);
+          this.countries = res.data
+        })
+        .catch(err => console.log(err))
+    }
+  }
+};
+</script>
+
+<style scoped>
+  .border-card{
+    box-shadow: 2px 2px 5px 2px #c4c2c2;
+  }
+</style>
