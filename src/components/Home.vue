@@ -34,6 +34,7 @@ export default {
         .get("https://restcountries.eu/rest/v2/all")
         .then((res) => {
           this.countries = res.data;
+          this.filterCountries = res.data;
         })
         .catch((err) => console.log(err));
     },
