@@ -2,7 +2,7 @@
   <div>
     <div class="mt-5">
       <router-link to="/">
-        <button class="btn shadow" style="padding:2px 20px !important">
+        <button class="btn shadow" :class="{mode:mode}" style="padding:2px 20px !important">
           <i class="fa fa-arrow-left"></i> Back
         </button>
       </router-link>
@@ -13,7 +13,7 @@
         <img
           alt="Vue logo"
           :src="country.flag"
-        style="width:100%; height:300px;"
+        style="width:100%; height:400px;"
 
         />
       </div>
@@ -56,6 +56,7 @@
           </div>
           <div class="col-md-8">
             <a
+              :class="{mode:mode}"
               v-for="border in country.borders"
               onclick="setTimeout(function(){ location.reload() }, 500)"
               :key="border.code"
@@ -76,6 +77,7 @@
 <script>
 import axios from "axios";
 export default {
+  props:[ 'mode'],
   data() {
     return {
       country: {},
@@ -108,5 +110,12 @@ export default {
 .border-countries {
   border: 1px solid black;
   padding: 2px 10px;
+}
+
+.mode{
+  background-color: hsl(209, 23%, 22%) !important;
+  box-shadow: 1px 1px 1px hsl(207, 26%, 17%);
+  color: #ffffff;
+  border:1px solid hsl(209, 23%, 22%);
 }
 </style>

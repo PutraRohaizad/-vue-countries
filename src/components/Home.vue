@@ -1,10 +1,11 @@
 <template>
   <div>
     <filtersearch
+      :mode="mode"
       @filterSearch="filterSearch($event)"
       @filterRegion="filterRegion($event)"
     ></filtersearch>
-    <contentbody :countries="filterCountries"></contentbody>
+    <contentbody :mode="mode" :countries="filterCountries"></contentbody>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
     filtersearch,
     contentbody,
   },
+  props:[ 'mode'],
   data() {
     return {
       countries: [],

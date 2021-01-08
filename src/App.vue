@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <navbar @toggleMode="toggleMode" ></navbar>
+    <navbar :mode="mode" @toggleMode="toggleMode" ></navbar>
    <div class="container">
-      <router-view></router-view>
+      <router-view :mode="mode"></router-view>
    </div>
 
   </div>
@@ -24,7 +24,6 @@ export default {
     toggleMode(){
         const app = document.querySelector('#app');
         this.mode = !this.mode;
-        console.log(this.mode);
             if(this.mode){
               app.style.backgroundColor = "hsl(207, 26%, 17%)";
               app.style.color = "white";
